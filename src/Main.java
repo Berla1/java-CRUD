@@ -9,8 +9,17 @@ public class Main {
         u.setNome(scanner.next());
         System.out.print("Digite a idade do usuario que deseja cadastrar: ");
         u.setIdade(scanner.nextInt());
+        System.out.println("--------------------------------------------------------------");
 
         new UserDAO().cadastrarUser(u);
+
+        UserDAO userDAO = new UserDAO();
+        for(User usuario : userDAO.getUsers()){
+            System.out.println("ID: " + usuario.getId());
+            System.out.println("User: " + usuario.getNome());
+            System.out.println("Idade: " + usuario.getIdade());
+            System.out.println("--------------------------------------------------------------");
+        }
     }
 
 

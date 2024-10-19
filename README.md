@@ -1,4 +1,4 @@
-# java-CRUD
+# CRUD em java
 
 Um projeto Java que implementa operações básicas de CRUD (Create, Read, Update, Delete) utilizando um banco de dados MySQL. Este repositório é ideal para quem deseja aprender como manipular dados em Java com JDBC.
 

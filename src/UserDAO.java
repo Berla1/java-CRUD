@@ -22,12 +22,14 @@ public class UserDAO {
     public List<User> getUsers(){
         String sql = "SELECT * FROM tb_teste";
         List<User> users = new ArrayList<User>();
+
         PreparedStatement ps = null;
         ResultSet rset = null;
+
         try{
             ps = Conexao.getConexao().prepareStatement(sql);
             rset = ps.executeQuery();
-            // Itera pela lista pra fazer o get
+
             while(rset.next()){
                 User user = new User();
                 user.setId(rset.getInt("id"));

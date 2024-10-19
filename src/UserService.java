@@ -19,6 +19,7 @@ public class UserService {
 
     public void getUser(){
         for(User usuario : userDAO.getUsers()){
+
            System.out.println("ID: " + usuario.getId());
            System.out.println("User: " + usuario.getNome());
            System.out.println("Idade: " + usuario.getIdade());
@@ -43,10 +44,10 @@ public class UserService {
 
     public void deleteUser(){
 
-        System.out.println("Digite o ID do usuário que deseja deletar: ");
+        System.out.print("Digite o ID do usuário que deseja deletar: ");
         int id = scanner.nextInt();
         userDAO.deleteUser(id);
-        System.out.print("Usuário deletado com sucesso!");
+        System.out.println("Usuário deletado com sucesso!");
     }
 
 }

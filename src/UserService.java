@@ -41,7 +41,13 @@ public class UserService {
         userDAO.updateUser(u);
     }
 
+    public void deleteUser(){
 
+        System.out.println("Digite o ID do usuário que deseja deletar: ");
+        int id = scanner.nextInt();
+        userDAO.deleteUser(id);
+        System.out.print("Usuário deletado com sucesso!");
+    }
 
 }
 

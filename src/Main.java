@@ -6,6 +6,7 @@ public class Main {
         userService.setUser();
         userService.getUser();
         userService.updateUser();
+        userService.deleteUser();
     }
 
 

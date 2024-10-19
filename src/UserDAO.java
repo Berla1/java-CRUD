@@ -59,4 +59,19 @@ public class UserDAO {
         }
     }
 
+    public void deleteUser(int id){
+        String sql = "DELETE FROM tb_teste WHERE id = ?";
+
+        PreparedStatement ps = null;
+
+        try {
+            ps = Conexao.getConexao().prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.execute();
+            ps.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }

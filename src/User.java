@@ -3,7 +3,7 @@ public class User {
     private String nome;
     private int idade;
 
-    public int getId(){
+    public int getId() {
         return id;
     }
 

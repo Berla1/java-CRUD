@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDAO {
-    public void cadastrarUser(User user){
+    public void postUser(User user){
         String sql = "INSERT INTO tb_teste (NOME, IDADE) VALUES(?, ?)";
 
         PreparedStatement ps = null;

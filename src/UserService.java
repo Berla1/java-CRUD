@@ -14,7 +14,7 @@ public class UserService {
         u.setIdade(scanner.nextInt());
         System.out.println("--------------------------------------------------------------");
 
-        userDAO.cadastrarUser(u);
+        userDAO.postUser(u);
     }
 
     public void getUser(){

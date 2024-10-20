@@ -1,3 +1,7 @@
+package app;
+
+import services.UserService;
+
 import java.util.Scanner;
 
 public class Main {

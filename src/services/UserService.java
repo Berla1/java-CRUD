@@ -1,3 +1,8 @@
+package services;
+
+import dao.UserDAO;
+import models.User;
+
 import java.util.Scanner;
 
 public class UserService {
@@ -21,7 +26,7 @@ public class UserService {
         for(User usuario : userDAO.getUsers()){
 
            System.out.println("ID: " + usuario.getId());
-           System.out.println("User: " + usuario.getNome());
+           System.out.println("model.User: " + usuario.getNome());
            System.out.println("Idade: " + usuario.getIdade());
            System.out.println("--------------------------------------------------------------");
         }

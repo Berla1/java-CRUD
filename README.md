@@ -20,4 +20,4 @@ Um projeto Java que implementa operações básicas de CRUD (Create, Read, Updat
    ```bash
    git clone https://github.com/Berla1/java-CRUD.git
 2. Configure o banco de dados MySQL.
-3. Compile e execute o `Main.java`
+3. Compile e execute o `app.Main.java`

@@ -1,3 +1,8 @@
+package dao;
+
+import dao.connection.Connection;
+import models.User;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -10,7 +15,7 @@ public class UserDAO {
 
         PreparedStatement ps = null;
         try {
-            ps = Conexao.getConexao().prepareStatement(sql);
+            ps = Connection.getConexao().prepareStatement(sql);
             ps.setString(1, user.getNome());
             ps.setInt(2, user.getIdade());
             ps.execute();
@@ -27,7 +32,7 @@ public class UserDAO {
         ResultSet rset = null;
 
         try{
-            ps = Conexao.getConexao().prepareStatement(sql);
+            ps = Connection.getConexao().prepareStatement(sql);
             rset = ps.executeQuery();
 
             while(rset.next()){
@@ -50,7 +55,7 @@ public class UserDAO {
         PreparedStatement ps = null;
 
         try {
-            ps = Conexao.getConexao().prepareStatement(sql);
+            ps = Connection.getConexao().prepareStatement(sql);
             ps.setString(1, user.getNome());
             ps.setInt(2, user.getIdade());
             ps.setInt(3, user.getId());
@@ -67,7 +72,7 @@ public class UserDAO {
         PreparedStatement ps = null;
 
         try {
-            ps = Conexao.getConexao().prepareStatement(sql);
+            ps = Connection.getConexao().prepareStatement(sql);
             ps.setInt(1, id);
             ps.execute();
             ps.close();

@@ -3,6 +3,7 @@ package services;
 import dao.UserDAO;
 import models.User;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class UserService {
@@ -22,13 +23,18 @@ public class UserService {
         userDAO.postUser(u);
     }
 
-    public void getUser(){
-        for(User usuario : userDAO.getUsers()){
+    public void getUser() {
+        List<User> usuarios = userDAO.getUsers();
 
-           System.out.println("ID: " + usuario.getId());
-           System.out.println("model.User: " + usuario.getNome());
-           System.out.println("Idade: " + usuario.getIdade());
-           System.out.println("--------------------------------------------------------------");
+        if (usuarios.isEmpty()) {
+            System.out.println("Nenhum usuário cadastrado.");
+        } else {
+            for (User usuario : usuarios) {
+                System.out.println("ID: " + usuario.getId());
+                System.out.println("Nome: " + usuario.getNome());
+                System.out.println("Idade: " + usuario.getIdade());
+                System.out.println("--------------------------------------------------------------");
+            }
         }
     }
 
